@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-default n-header" role="navigation">
+        <div class="container-fluid n-header-wrapper">
+          <a class="navbar-brand jx-logo" href="#">
+            <img src="./img/logo2.jpg" alt="学生管理系统">
+          </a>
+            <div class="navbar-wrapper">
+                <ul class="nav navbar-nav nav-items">
+                    <li>
+                        <a class="nav-item" href="#" data-toggle="modal" data-target="#infoModal">
+                            <span>消息</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="#" data-toggle="modal" data-target="#setModal">
+                            <span>设置</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="nav-item dropdown-toggle" href="#" data-toggle="dropdown">
+                            <span>安全退出</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">退出</a>
+                            </li>
+                            <li>
+                                <a href="#">注销</a>
+                            </li>
+                            <li>
+                                <a href="#">切换账号</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">帮助</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+              </div>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    <!-- 导航栏结束 -->
+    <div class="main">
+        <div class="container-fluid main-content">
+          <div class="row mian-row">
+            <div class="col-md-2 col-lg-2 left">
+                <div class="current-user">
+                    <span>当前用户:</span>
+                    <span class="uname">admin</span>
+                </div>
+                <div class="class-div">
+                    <ul class="class-list">
+                        <li>1班</li>
+                        <li>2班</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10 col-lg-10 right">
+              <div class="right-content">
+                <!-- 头部 -->
+              <div class="right-header">
+                <span>当前：首页-</span>
+                <span class="right-class">移动2班</span>
+              </div>
+              <!-- 班级和搜索框 -->
+              <div class="right-info">
+                <div class="col-md-8 ">
+                  <span class="right-class">移动2班</span>
+                </div>
+                <div class="col-md-4">
+                  <div class="searchBox fr">
+                    <div class="searchInput fl">
+                      <input type="text" placeholder="用户名">
+                    </div>
+                  <div class="searchBtn fl">
+                    <input type="submit" value="">
+                  </div>
+                </div>
+                </div>
+              </div>
+              <!-- 按钮组 -->
+              <div class="col-md-12">
+              <div class="right-btns">
+                <button class="btn btn-default add-stu-btn" data-toggle="modal" data-target="#myModal">添加</button>
+                <button class="btn btn-info">编辑</button>
+                <button class="btn btn-danger">删除</button>
+                <button class="btn btn-success">账号授权</button>
+              </div>
+            </div>
+              <!-- 学生信息 -->
+              <div class="col-md-12">
+                <table>
+                  <thead>
+                    <tr>
+                      <th style="width: 2%;"><input type="checkbox" class="all-btn"></th>
+                      <th style="width: 10%;">姓名</th>
+                      <th style="width: 10%;">学号</th>
+                      <th style="width: 15%;">手机号</th>
+                      <th style="width: 8%;">性别</th>
+                      <th style="width: 8%;">年龄</th>
+                      <th style="width: 27%;">专业</th>
+                      <th style="width: 25%;">操作</th>
+                    </tr>
+                  </thead>
+                  <tbody class="student-info">
+                    <tr >
+                      <td><input type="checkbox"></td>
+                      <td>边伯贤</td>
+                      <td>04</td>
+                      <td>17839317350</td>
+                      <td>天神</td>
+                      <td>永远3岁</td>
+                      <td>too much</td>
+                      <td>
+                        <button class="btn btn-info" >编辑</button>
+                        <button class="btn btn-danger">删除</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 消息弹出框 -->
+      <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">站内信</h4>
+            </div>
+            <div class="modal-body">
+              <ul>
+                  <li>【系统消息】您已被选中花呗免还款</li>
+                  <li>【系统消息】您已被选中信用卡免还款</li>
+                  <li>【警方提示】误信任虚假消息</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 设置弹出框 -->
+      <div class="modal fade" id="setModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">系统设置</h4>
+            </div>
+            <div class="modal-body">
+              <ul>
+                  <li><input type="checkbox"></li>
+                  <li></li>
+                  <li></li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 编辑 -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">新增学生信息</h4>
+            </div>
+            <div class="modal-body stu-modal-body">
+              <div class="col-md-12">
+                <div class="col-md-4">
+                    <div class="e-tr">
+                        <label class="e-td" for="">姓名</label>
+                        <input class="e-td e-input e-name" type="text" placeholder="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="e-tr">
+                        <label class="e-td" for="">学号</label>
+                        <input class="e-td e-input e-sno" type="text" placeholder="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="e-tr">
+                        <label class="e-td" for="">手机号</label>
+                        <input class="e-td e-input e-tel" type="text" placeholder="">
+                    </div>
+                </div>
+                <div class="col-md-4" role="form">
+                    <div class="e-tr">
+                        <label class="e-td" for="">性别</label>
+                        <select id="u-select" class="e-select" style="background-color: #fff;">
+                            <option value="m">男</option>
+                            <option value="f">女</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="e-tr">
+                        <label class="e-td" for="">年龄</label>
+                        <input class="e-td e-input e-age" type="text" placeholder="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="e-tr">
+                        <label class="e-td" for="">专&nbsp;&nbsp;&nbsp;&nbsp;业</label>
+                        <input class="e-td e-input e-major" type="text" placeholder="">
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary addEditBtn">确认</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 删除 -->
+      <div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="delModalLabel">提示</h4>
+            </div>
+            <div class="modal-body">
+              
+              <p>确定要删除吗？</p>
+              <p>此操作不可恢复</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary del-sure">确定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="./js/json.js"></script>
+      <script>
+          $(function(){
+            //左侧班级
+            var classIndex=0;
+            //右侧学生所在行的索引
+            var trIndex=0;
+            //所有的学生信息
+            var studentArr=[students_json_01.data,students_json_02.data];
+
+             //学生信息在本地储存
+            saveStuInfo(false);
+            showUserName();
+            showCurrentClass();
+            showStudentInfo();
+           
+
+            //本地数据的持久化存储
+            function saveStuInfo(flag){
+              //0 false full undefinde " " 这些情况会被判断为false
+              if(!localStorage.getItem("stuInfo")||flag){
+                 //将对象转化为字符串
+              var info=JSON.stringify(studentArr);
+              //设置数据setItem，获取数据getItem,只能储存字符串的数据
+              localStorage.setItem("stuInfo",info);
+              
+              }else{
+                studentArr=JSON.parse(localStorage.getItem("stuInfo"))
+              }
+
+            }
+
+
+
+            //显示用户 
+            function showUserName(){
+              var uname=localStorage.getItem('USERID');
+              $(".uname").html(uname)
+            }
+             
+            //事件委托，只要有动态添加的元素都要用事件委托
+            //点击班级，切换学生信息
+            $(document).delegate(".class-list li","click",function(){
+                $(this).css("background-color","white")
+                $(this).siblings().css("background-color"," rgb(238, 238, 238)")
+                classIndex=$(this).index();
+                $(".right-class").html($(".class-list li").eq(classIndex).html())
+                showStudentInfo();
+            })
+            //显示班级，class_json来自于json.js
+            function showCurrentClass(){
+              var classArr=class_json.data;
+              var liContent="";
+              for(var i=0;i<classArr.length;i++){
+                liContent+="<li>"+classArr[i].classname+"</li>";
+             }
+             $(".class-list").html(liContent);
+             $(".class-list li").eq(0).css("background-color","white")
+            }
+
+            //显示学生信息，数据来自于json.js
+            function showStudentInfo(){
+            var studentContent="";
+            for(var i=0;i<studentArr[classIndex].length;i++){
+              studentContent+='<tr data-index='+i+'><td><input type="checkbox" class="else-btn"></td>'
+                      +'<td>'+studentArr[classIndex][i].truename+'</td>'
+                      +'<td>'+studentArr[classIndex][i].sno+'</td>'
+                      +'<td>'+studentArr[classIndex][i].tel+'</td>'
+                      +'<td>'+(studentArr[classIndex][i].gender=='m'?'男':'女')+'</td>'
+                      +'<td>'+studentArr[classIndex][i].age+'</td>'
+                      +'<td>'+studentArr[classIndex][i].major+'</td>'
+                      +'<td><button class="btn btn-info btn-edit btn-index"  data-toggle="modal" data-target="#myModal">编辑</button>'
+                      +'<button class="btn btn-danger btn-del btn-index" data-toggle="modal" data-target="#delModal">删除</button></td></tr>'
+            }
+            $(".student-info").html(studentContent);
+            }
+            //获取学生在本班级中的序号
+            $(document).delegate(".btn-index","click",function(){
+              trIndex= $(this).parents("tr").attr("data-index")
+            })
+
+           
+            //编辑学生信息
+            $(document).delegate(".btn-edit","click",function(){
+              $(".modal-title").html("编辑学生信息")
+              var stu=studentArr[classIndex][trIndex];
+              $(".e-name").val(stu.truename)
+              $(".e-sno").val(stu.sno)
+              $(".e-tel").val(stu.tel)
+              $(".e-select").val(stu.gender)
+              $(".e-age").val(stu.age)
+              $(".e-major").val(stu.major)
+              $(".addEditBtn").attr("eait-status","edit")
+            })
+            //新增学生信息
+            $(".add-stu-btn").click(function(){
+              $(".e-name").val("")
+              $(".e-sno").val("")
+              $(".e-tel").val("")
+              $(".e-select").val("")
+              $(".e-age").val("")
+              $(".e-major").val("")
+              $(".addEditBtn").attr("eait-status","add")
+            })
+            //点击编辑或者新增模态框的确定按钮
+            $(".addEditBtn").click(function(){
+              var stu={};
+              stu.truename=$(".e-name").val()
+              stu.sno=$(".e-sno").val()
+              stu.tel=$(".e-tel").val()
+              stu.gender=$(".e-select").val()
+              stu.age=$(".e-age").val()
+              stu.major=$(".e-major").val()
+              var status=$(this).attr("eait-status");
+              if(status=="add"){
+                studentArr[classIndex].push(stu);
+              }else{
+                studentArr[classIndex].splice(trIndex*1,1,stu);
+              }
+              showStudentInfo();
+              saveStuInfo(true);
+              //关闭模态框
+              $("#myModal").modal("hide")
+            })
+            //全选按钮的操作
+          $(document).delegate(".all-btn","click",function(){
+              if(this.checked){
+                $(".else-btn").prop("checked", true);
+              }else{
+                $(".else-btn").prop("checked", false);
+              }
+            })
+          $(document).delegate(".else-btn","click",function(){
+            var s=$(".else-btn").length;
+            var e=$(".else-btn:checked").length;
+            if(s==e){
+              $(".all-btn").prop("checked", true)
+            }else{
+              $(".all-btn").prop("checked", false)
+            }
+          })
+            //删除学生信息
+            $(".del-sure").click(function(){
+              studentArr[classIndex].splice(trIndex*1,1)
+             
+              showStudentInfo();
+              saveStuInfo(true);
+              $("#delModal").modal("hide")
+            })
+          })
+      </script>
+    
+</body>
+</html>

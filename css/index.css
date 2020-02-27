@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+button{
+    margin-left: 5px;
+}
+.n-header{
+    background: #0095da;
+    height: 80px;
+    margin-bottom: 0;
+}
+.jx-logo{
+    height: 80px;
+    line-height: 100px;
+}
+.navbar-wrapper{
+    height: 80px;
+    width: 330px;
+    float: right;
+    margin-right: 20px;
+}
+.nav-items>li{
+    float: left;
+    list-style: none;
+    background: #81b5d6;
+    margin-top: 20px; 
+    margin-left: 7px;
+}
+    
+.nav-item{
+    text-decoration: none;
+    color: #185d87 !important;
+    text-align: center;
+    font-size: 14px;
+    display:inline-block;
+    height: 36px;
+    width:100px;
+    padding-top: 10px !important;
+}
+.nav-item:hover {
+    background: #e7e7e7 !important;
+  }
+.dropdown{
+    position: relative;
+}
+.dropdown-menu{
+    width: 160px;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: -10px;
+    border: solid 1px #ccc;
+    display: none;
+}
+.main,
+.main-content,
+.mian-row {
+  height: auto;
+}
+.left {
+  padding: 0px;
+  background: rgb(238, 238, 238);
+  border-right: solid 1px #ddd !important;
+  height:670px;
+}
+.right {
+  padding: 0;
+}
+.modal-body ul li{
+    list-style: none;
+    line-height: 25px;
+}
+.modal-body ul li:nth-child(3){
+   color: red;
+}
+.current-user{
+    text-align: center;
+    height: 38px;
+    width: 100%;
+    font: 14px/38px "微软雅黑";
+    color: #7e7e7e;
+    border-bottom: solid 1px #ddd;
+}
+.class-div>ul>li{
+    background: url("../img/xin2.jpg")no-repeat 25px center;
+    color: #678090;
+    height: 58px;
+    font: 18px/58px "微软雅黑";
+    padding-left: 53px;
+    width: 100%;
+    border-bottom: solid 1px #ddd;
+    cursor: pointer;
+}
+
+.right-header{
+    height: 38px;
+    color: rgb(160, 160, 160);
+    background-color: rgb(245, 245, 245);
+    padding-left: 24px;
+    font-size: 14px;
+    line-height: 38px;
+}
+.right-info{
+    height: 60px;
+    line-height: 60px;
+}
+.right-info .right-class{
+    color: rgb(0, 149, 218);
+    font: bold 18px/60px 微软雅黑;
+    padding-left:12px ;
+}
+
+.searchBox{
+    padding-top: 15px;
+    padding-right: 24px;
+    width: 320px;
+}
+.searchInput{
+    height: 30px;
+    width: 244px;
+    overflow: hidden;
+    margin-top: 5px;
+    line-height: 15px;
+}
+.searchInput input{
+    width: 243px;
+    height: 30px;
+    border: solid 1px #ddd;
+    text-indent: 10px;
+    line-height: 0;
+}
+.searchBtn{
+    height: 30px;
+    width: 36px;
+   margin-right: 10px;
+}
+.searchBtn input{
+   background: url("../img/search.jpg");
+   width: 36px;
+   height: 30px;
+   border: none;
+}
+.right-btns{
+    border: solid 1px #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+table{
+    width: 100%;
+}
+table>thead{
+    background: rgb(241, 244, 249);
+    line-height: 35px;
+    border-bottom: solid 1px #ddd;
+}
+tbody tr{
+   height: 45px;
+}
+tbody tr:hover{
+    background-color: rgb(245, 245, 245);
+ }
+ #myModal .modal-dialog {
+    width: 800px;
+  }
+  .e-tr {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    color: #678090;
+    padding: 0 10px;
+    margin-top: 20px;
+  }
+  .e-tr label {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 40px;
+    margin: 0;
+    background: #fff;
+    font-weight: normal;
+    vertical-align: middle;
+  }
+  .e-tr input {
+    width: 110px;
+    height: 40px;
+    text-indent: 5px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 0;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+  }
+  .e-tr input:focus {
+    border: 1px solid #56a5f1;
+    border-radius: 4px;
+    outline: 1px solid #56a5f1;
+  }
+  .e-select {
+    width: 110px;
+    height: 40px;
+    vertical-align: middle;
+    border-radius: 0px;
+    background: #fff;
+    border: 1px solid #ccc;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url(../image/arrow.png) no-repeat scroll right center transparent;
+    padding-right: 14px;
+    text-indent: 10px;
+  }
+  .u-infors .col-md-4, .u-infors .col-md-9 {
+    padding: 0;
+  }
+  .stu-modal-body {
+    height: 160px;
+  }
+
+
